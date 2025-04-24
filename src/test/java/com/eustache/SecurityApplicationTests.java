@@ -1,10 +1,10 @@
-package com.eustache.security;
+package com.eustache;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthSpringSecurityRoleTests {
+class SecurityApplicationTests {
 
 	@Test
 	void contextLoads() {
