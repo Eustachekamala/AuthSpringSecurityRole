@@ -22,7 +22,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
         return "Welcome to the Application";
     }

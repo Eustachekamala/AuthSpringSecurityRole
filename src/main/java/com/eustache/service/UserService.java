@@ -42,8 +42,8 @@ public class UserService implements UserDetailsService {
         var user = userMapper.toUser(userDTO);
         System.out.println("BEFORE SAVE: " + user);
         user.setPassword(encoder.encode(user.getPassword()));
-        user.setCreatedAt(LocalDateTime.now());
-        user.setUpdatedAt(LocalDateTime.now());
+        user.setCreatedAt(user.getCreatedAt());
+        user.setUpdatedAt(user.getUpdatedAt());
         var savedUser = userRepository.save(user);
         System.out.println("AFTER SAVE: " + savedUser);
         return userMapper.toUserResponseDTO(savedUser);
